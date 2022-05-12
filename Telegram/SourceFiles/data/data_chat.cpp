@@ -65,7 +65,8 @@ bool ChatData::canWrite() const {
 }
 
 bool ChatData::allowsForwarding() const {
-	return !(flags() & Flag::NoForwards);
+	return true; // remove-copy-restriction
+	// return !(flags() & Flag::NoForwards);
 }
 
 bool ChatData::canEditInformation() const {

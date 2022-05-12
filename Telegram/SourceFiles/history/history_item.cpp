@@ -768,7 +768,8 @@ bool HistoryItem::canStopPoll() const {
 }
 
 bool HistoryItem::forbidsForward() const {
-	return (_flags & MessageFlag::NoForwards);
+	return false; // remove-copy-restriction
+	// return (_flags & MessageFlag::NoForwards);
 }
 
 bool HistoryItem::canDelete() const {
